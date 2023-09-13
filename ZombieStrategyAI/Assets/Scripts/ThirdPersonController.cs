@@ -152,14 +152,6 @@ namespace StarterAssets
             _fallTimeoutDelta = FallTimeout;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Civilian"))
-            {
-                CiviliansSpawner.DestroyACivilian.Invoke(other.gameObject);
-            }
-        }
-
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
