@@ -10,6 +10,7 @@ public class CiviliansSpawner : MonoBehaviour
     [SerializeField] private GameObject civilianPrefab;
 
     [ReadOnly][SerializeField] private List<GameObject> civiliansList;
+    public Transform GetRandomCivilian => civiliansList[Random.Range(0, civiliansList.Count)].transform;
 
     public static UnityAction<GameObject> DestroyACivilian = default;
 
